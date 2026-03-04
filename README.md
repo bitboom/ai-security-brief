@@ -20,8 +20,41 @@ Daily workflow (~10–15 min):
 2. **Log** — record noteworthy items in `news/YYYY-MM-DD.md`
 3. **Draft** — write a Threads-ready post in `drafts/`
 4. **Review** — run the quality checklist below
-5. **Post** — publish to Threads
+5. **Post** — publish EN to Threads, then quote-post with KR version
 6. **Archive** — move the draft to `posted/`
+
+## Bilingual Posting (EN → KR)
+
+Every post is published in two steps using Threads' **quote post** feature:
+
+1. **Publish the English original** — the primary post
+2. **Quote-post with the Korean version** — embeds the EN original so Korean readers always see both
+
+Why quote post? Feed ordering on Threads is unpredictable. A quote post guarantees the Korean version visually includes the English original, regardless of when each appears in followers' feeds.
+
+### Korean writing guidelines
+
+- The KR version is a **rewrite**, not a translation. Same facts, same tone, natural Korean.
+- Base register: **존댓말 (해요체)** — conversational and approachable, not stiff 합니다체.
+- Technical terms: keep English with inline Korean context where needed (e.g., "프롬프트 인젝션(prompt injection)").
+- Header format: EN uses `[AI Security Brief]`, KR uses `[AI 보안 브리프]`.
+- Deep Dive → `[AI 보안 딥다이브]`, Incident → `[AI 보안 인시던트]`.
+
+### Draft file format
+
+Each draft file contains both versions separated by `---`:
+
+```
+[AI Security Brief] 2026-03-04        ← EN block
+
+... English content ...
+
+---
+
+[AI 보안 브리프] 2026-03-04           ← KR block (quote post)
+
+... Korean content ...
+```
 
 ## Voice & Tone
 
@@ -89,6 +122,8 @@ Before posting, verify:
 - [ ] Links point to original sources
 - [ ] Post fits the fixed format
 - [ ] Would you actually stop scrolling to read this? If not, rewrite the hook
+- [ ] Korean rewrite reads naturally (not translated-sounding)
+- [ ] Technical terms: English preserved with Korean context where needed
 
 ## Directory Layout
 

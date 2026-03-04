@@ -19,4 +19,5 @@ YYYY-MM-DD
 - [ ] Draft written in `drafts/`
 - [ ] Quality checklist passed
 - [ ] Posted to Threads
+- [ ] Korean quote post published (if bilingual)
 - [ ] Archived to `posted/`

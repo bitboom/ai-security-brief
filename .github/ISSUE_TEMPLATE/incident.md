@@ -19,4 +19,5 @@ Describe the incident, leak, or vulnerability.
 - [ ] Draft written in `drafts/`
 - [ ] Quality checklist passed
 - [ ] Posted to Threads
+- [ ] Korean quote post published (if bilingual)
 - [ ] Archived to `posted/`

@@ -18,4 +18,5 @@ Link to the original source.
 - [ ] Attack and defense sections complete
 - [ ] Quality checklist passed
 - [ ] Posted to Threads
+- [ ] Korean quote post published (if bilingual)
 - [ ] Archived to `posted/`
