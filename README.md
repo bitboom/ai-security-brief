@@ -20,7 +20,7 @@ Daily workflow (~10–15 min):
 2. **Log** — record noteworthy items in `news/YYYY-MM-DD.md`
 3. **Draft** — write a Threads-ready post in `drafts/`
 4. **Review** — run the quality checklist below
-5. **Post** — publish EN to Threads, then quote-post with KR version
+5. **Post** — publish EN to Threads, then quote-post with KR version; update frontmatter to `true`
 6. **Archive** — move the draft to `posted/`
 
 ## Bilingual Posting (EN → KR)
@@ -42,9 +42,16 @@ Why quote post? Feed ordering on Threads is unpredictable. A quote post guarante
 
 ### Draft file format
 
-Each draft file contains both versions separated by `---`:
+Each draft file starts with YAML frontmatter tracking posting status, followed by both versions separated by `---`:
 
-```
+```yaml
+---
+type: brief
+date: 2026-03-04
+posted_en: false
+posted_kr: false
+---
+
 [AI Security Brief] 2026-03-04        ← EN block
 
 ... English content ...
@@ -54,6 +61,24 @@ Each draft file contains both versions separated by `---`:
 [AI 보안 브리프] 2026-03-04           ← KR block (quote post)
 
 ... Korean content ...
+```
+
+- `type`: `brief` | `deep-dive` | `incident`
+- `date`: `YYYY-MM-DD`
+- `posted_en` / `posted_kr`: set to `true` after publishing each version
+
+### Posting status
+
+Check which drafts haven't been posted yet:
+
+```bash
+python3 scripts/status.py
+```
+
+Output example:
+```
+Posting Status
+  brief_2026-03-04.md — EN: ✗  KR: ✗
 ```
 
 ## Voice & Tone

@@ -59,14 +59,27 @@ def main():
         print(f"Draft already exists: {filepath}")
         sys.exit(0)
 
+    # Build frontmatter
+    frontmatter_lines = [
+        "---",
+        f"type: {args.draft_type}",
+        f"date: {args.date}",
+    ]
+    if args.lang in ("en", "both"):
+        frontmatter_lines.append("posted_en: false")
+    if args.lang in ("ko", "both"):
+        frontmatter_lines.append("posted_kr: false")
+    frontmatter_lines.append("---")
+    frontmatter = "\n".join(frontmatter_lines) + "\n\n"
+
     if args.lang == "en":
-        content = TEMPLATES_EN[args.draft_type].format(date=args.date)
+        content = frontmatter + TEMPLATES_EN[args.draft_type].format(date=args.date)
     elif args.lang == "ko":
-        content = TEMPLATES_KR[args.draft_type].format(date=args.date)
+        content = frontmatter + TEMPLATES_KR[args.draft_type].format(date=args.date)
     else:  # both
         en = TEMPLATES_EN[args.draft_type].format(date=args.date)
         kr = TEMPLATES_KR[args.draft_type].format(date=args.date)
-        content = en + "\n---\n\n" + kr
+        content = frontmatter + en + "\n---\n\n" + kr
 
     filepath.write_text(content)
     print(f"Created: {filepath}")
