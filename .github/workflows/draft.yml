@@ -1,0 +1,35 @@
+name: Create Draft Stub
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date (YYYY-MM-DD)"
+        required: true
+      type:
+        description: "Draft type"
+        required: true
+        type: choice
+        options:
+          - brief
+          - deep-dive
+          - incident
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Create draft stub
+        run: python scripts/draft_stub.py --date "${{ github.event.inputs.date }}" --type "${{ github.event.inputs.type }}"
+
+      - name: Show output
+        run: |
+          echo "Draft created for ${{ github.event.inputs.type }} on ${{ github.event.inputs.date }}"
+          ls -la drafts/
