@@ -3,29 +3,30 @@
 ```
 [AI Security Incident] YYYY-MM-DD — INCIDENT_NAME
 
-## What Happened
-Brief factual description of the incident.
+What happened:
+Brief, factual, no drama. Just the facts — but make them interesting.
 
-## Timeline
+Timeline:
 - YYYY-MM-DD — Event 1
 - YYYY-MM-DD — Event 2
 - YYYY-MM-DD — Event 3
 
-## Impact
-Who was affected and how (data, systems, users).
+Who got hurt:
+Impact in plain language. Data, systems, users, reputation.
 
-## Root Cause
-Technical explanation of the vulnerability or failure.
+How it happened:
+Root cause explained simply. No jargon without translation.
 
-## Response
-How the organization or community responded.
+What they did about it:
+Response and remediation — or lack thereof.
 
-## Lessons Learned
-What practitioners should take away from this incident.
+The lesson:
+What the rest of us should take away. Be direct.
 ```
 
-## Instructions
+## Tone Guide
 
-- Stick to confirmed facts; mark unverified claims explicitly.
-- Include a timeline with dates where available.
-- Focus on lessons learned — the goal is to help others prevent similar incidents.
+- Incidents are inherently dramatic — you don't need to add drama. Understatement hits harder.
+- "A misconfigured API exposed 2M records" > "A DEVASTATING breach rocked the industry"
+- Stick to confirmed facts. Flag anything unverified with "reportedly" or "unconfirmed."
+- The lesson section is where your voice shines. Be honest, even blunt.

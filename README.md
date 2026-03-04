@@ -23,6 +23,26 @@ Daily workflow (~10–15 min):
 5. **Post** — publish to Threads
 6. **Archive** — move the draft to `posted/`
 
+## Voice & Tone
+
+This series is written for **Threads** — short, punchy, scroll-stopping. The guiding principles:
+
+- **Professional but human.** You know your stuff, but you're not writing a NIST report. Think "smart colleague explaining over coffee," not "vendor whitepaper."
+- **Accessible first.** A developer, PM, or curious founder should understand every post without Googling acronyms. If you must use jargon, explain it inline.
+- **Witty, not try-hard.** A well-placed analogy or dry observation keeps readers engaged. Forced humor doesn't. One good line per post is plenty.
+- **Threads-native.** Short paragraphs. Line breaks between ideas. No walls of text. The reader is scrolling with their thumb — respect that.
+- **Confident but honest.** State what's known clearly. Flag what's uncertain. Never hype, never downplay.
+
+### Tone Do's & Don'ts
+
+| Do | Don't |
+|----|-------|
+| "Think of it as a skeleton key for LLMs" | "This is a paradigm-shifting attack vector" |
+| "Reportedly" / "claims" when unconfirmed | State rumors as fact |
+| Use one relatable analogy per post | Stack three metaphors in a row |
+| End with a sharp, quotable insight | End with "time will tell" |
+| Write like you'd text a smart friend | Write like a press release |
+
 ## Writing Format
 
 Every Daily Brief follows this fixed structure:
@@ -34,7 +54,7 @@ Every Daily Brief follows this fixed structure:
 2. HEADLINE — one-sentence summary (source, date)
 3. HEADLINE — one-sentence summary (source, date)
 
-Insight: one or two sentences of editorial analysis connecting the dots.
+Insight: one or two sentences — sharp, opinionated, connects the dots.
 ```
 
 Example:
@@ -42,11 +62,11 @@ Example:
 ```
 [AI Security Brief] 2026-03-04
 
-1. GPT-5 jailbreak bypasses alignment filters — Researchers demonstrate a prompt-injection chain that defeats GPT-5's safety layer (Arxiv, 2026-03-03)
-2. EU AI Act enforcement begins — First fines issued under the EU AI Act for non-compliant facial recognition deployments (Reuters, 2026-03-04)
-3. Open-source model poisoning toolkit released — A red-team toolkit for testing training-data poisoning is now public on GitHub (GitHub, 2026-03-02)
+1. GPT-5 jailbreak bypasses alignment filters — A prompt-injection chain slips past GPT-5's safety layer like it's not even there (Arxiv, 2026-03-03)
+2. EU AI Act drops its first fines — Two facial-recognition vendors just became expensive cautionary tales (Reuters, 2026-03-04)
+3. Model poisoning toolkit goes open-source — Red teamers rejoice, blue teamers update your threat models (GitHub, 2026-03-02)
 
-Insight: The convergence of new attack tooling and tightening regulation signals that 2026 will force organizations to treat AI security as a first-class compliance concern, not an afterthought.
+Insight: New attack tooling on Monday, new regulation fines on Tuesday. 2026 is making it very clear — AI security isn't a nice-to-have anymore, it's the cost of doing business.
 ```
 
 ## Sourcing & Link Policy
@@ -63,11 +83,12 @@ Insight: The convergence of new attack tooling and tightening regulation signals
 Before posting, verify:
 
 - [ ] All facts are sourced and dated
-- [ ] Technical terms are used correctly
-- [ ] No hype or sensationalism — neutral tone
+- [ ] Technical terms are used correctly (and explained if niche)
+- [ ] Tone is sharp but not sensational — witty, not hype
 - [ ] Uncertainty is marked explicitly ("reportedly", "claims", "unconfirmed")
 - [ ] Links point to original sources
 - [ ] Post fits the fixed format
+- [ ] Would you actually stop scrolling to read this? If not, rewrite the hook
 
 ## Directory Layout
 

@@ -10,9 +10,9 @@ from pathlib import Path
 DRAFTS_DIR = Path(__file__).resolve().parent.parent / "drafts"
 
 TEMPLATES = {
-    "brief": "[AI Security Brief] {date}\n\n1. TODO — headline and summary (source, date)\n2. TODO — headline and summary (source, date)\n3. TODO — headline and summary (source, date)\n\nInsight: TODO\n",
-    "deep-dive": "[AI Security Deep Dive] {date} — TODO_TITLE\n\nSource: TODO_LINK (author, date)\n\n## Summary\nTODO\n\n## Attack / Technique\nTODO\n\n## Defense / Mitigation\nTODO\n\n## Implications\nTODO\n\n## Key Takeaway\nTODO\n",
-    "incident": "[AI Security Incident] {date} — TODO_NAME\n\n## What Happened\nTODO\n\n## Timeline\n- {date} — TODO\n\n## Impact\nTODO\n\n## Root Cause\nTODO\n\n## Response\nTODO\n\n## Lessons Learned\nTODO\n",
+    "brief": "[AI Security Brief] {date}\n\n1. TODO — punchy one-sentence summary (source, date)\n2. TODO — punchy one-sentence summary (source, date)\n3. TODO — punchy one-sentence summary (source, date)\n\nInsight: TODO — sharp, opinionated, connect the dots.\n",
+    "deep-dive": "[AI Security Deep Dive] {date} — TODO_TITLE\n\nSource: TODO_LINK (author, date)\n\nTL;DR — TODO\n\nWhat it is:\nTODO\n\nHow it works:\nTODO\n\nSo what?\nTODO\n\nWhat to do about it:\nTODO\n\nBottom line:\nTODO\n",
+    "incident": "[AI Security Incident] {date} — TODO_NAME\n\nWhat happened:\nTODO\n\nTimeline:\n- {date} — TODO\n\nWho got hurt:\nTODO\n\nHow it happened:\nTODO\n\nWhat they did about it:\nTODO\n\nThe lesson:\nTODO\n",
 }
 
 
