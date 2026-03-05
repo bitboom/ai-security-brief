@@ -40,6 +40,20 @@ Why quote post? Feed ordering on Threads is unpredictable. A quote post guarante
 - Header format: EN uses `[AI Security Brief]`, KR uses `[AI 보안 브리프]`.
 - Deep Dive → `[AI 보안 딥다이브]`, Incident → `[AI 보안 인시던트]`.
 
+#### 번역투 방지 규칙
+
+KR 버전에서 가장 흔한 실수는 영어 구조를 그대로 옮기는 것. 아래 규칙을 반드시 따를 것:
+
+| 하지 말 것 (번역투) | 할 것 (자연스러운 한국어) |
+|---|---|
+| "조 단위 기업 셋. 같은 보안 설계 하나." | "Apple, Meta, Google. 셋 다 같은 곳을 보고 있어요." |
+| "커스텀 실리콘. Stateless 처리. 저장 없음." | "자체 칩 서버에서 돌리고, 끝나면 바로 지워요." |
+| "검증 가능한 신뢰" (verifiable trust 직역) | "'우리도 못 봅니다'를 얼마나 증명할 수 있느냐" |
+
+- **영어 문장을 한국어 단어로 바꾸는 게 아니라, 같은 사실을 한국어로 새로 설명하는 것.**
+- 누군가한테 말로 설명한다고 생각하고 쓸 것. "이거 뭔데?" 라고 물어봤을 때 대답하는 톤.
+- 영어에서 짧은 문장 나열이 멋있다고 한국어에서도 그런 건 아님. 한국어는 자연스럽게 이어 쓰는 게 더 읽힘.
+
 ### Draft file format
 
 Each draft file starts with YAML frontmatter tracking posting status, followed by both versions separated by `---`:
@@ -106,25 +120,44 @@ This series is written for **Threads** — short, punchy, scroll-stopping. The g
 Every Daily Brief follows this fixed structure:
 
 ```
+HOOK — one or two short lines that frame the story. Make the reader stop scrolling.
+
 [AI Security Brief] YYYY-MM-DD
 
-1. HEADLINE — one-sentence summary (source, date)
-2. HEADLINE — one-sentence summary (source, date)
-3. HEADLINE — one-sentence summary (source, date)
+1. HEADLINE — short punchy sentences.
+Detail on its own line. (source, YYYY-MM-DD)
 
-Insight: one or two sentences — sharp, opinionated, connects the dots.
+2. HEADLINE — short punchy sentences.
+Detail on its own line. (source, YYYY-MM-DD)
+
+3. HEADLINE — short punchy sentences.
+Detail on its own line. (source, YYYY-MM-DD)
+
+Insight: one or two sentences — sharp, security-angled, connects the dots.
 ```
+
+### Threads formatting rules
+
+- **Line breaks > long sentences.** One idea per line. Threads readers scroll with their thumb.
+- **Hook first.** The `[AI Security Brief]` tag is not a hook. Start with 1-2 lines that frame why this matters.
+- **Break up each news item.** Don't cram everything into one sentence. Use 2-3 short lines per item.
+- **Security angle in Insight.** This is an AI *security* account. Use words like verifiable trust, attack surface, threat model, trust boundary — not just "privacy" or "trend."
 
 Example:
 
 ```
+Three trillion-dollar companies.
+One identical security thesis.
+
 [AI Security Brief] 2026-03-04
 
-1. GPT-5 jailbreak bypasses alignment filters — A prompt-injection chain slips past GPT-5's safety layer like it's not even there (Arxiv, 2026-03-03)
-2. EU AI Act drops its first fines — Two facial-recognition vendors just became expensive cautionary tales (Reuters, 2026-03-04)
-3. Model poisoning toolkit goes open-source — Red teamers rejoice, blue teamers update your threat models (GitHub, 2026-03-02)
+1. Apple Private Cloud Compute — Custom silicon. Stateless processing. No persistent storage. Then they invited researchers to break it. (Apple Security Research, 2024-06-10)
 
-Insight: New attack tooling on Monday, new regulation fines on Tuesday. 2026 is making it very clear — AI security isn't a nice-to-have anymore, it's the cost of doing business.
+2. Meta Private Processing — WhatsApp AI features running inside Confidential VMs. Even Meta can't see your messages during inference. (Meta Engineering Blog, 2025-04-29)
+
+3. Google Private AI Compute — TEE-based cloud inference + on-device Gemini Nano. IP-blinding relays straight from Apple's playbook. (Google Blog, 2025-11-11)
+
+Insight: The next AI moat isn't model capability — it's verifiable trust. When all three design systems where "we can't see your data even if we wanted to," that's not a feature. That's the new baseline for AI security.
 ```
 
 ## Sourcing & Link Policy
@@ -147,7 +180,11 @@ Before posting, verify:
 - [ ] Links point to original sources
 - [ ] Post fits the fixed format
 - [ ] Would you actually stop scrolling to read this? If not, rewrite the hook
-- [ ] Korean rewrite reads naturally (not translated-sounding)
+- [ ] Hook exists before the date tag — would you stop scrolling?
+- [ ] Each news item uses short lines with line breaks, not one long sentence
+- [ ] Insight uses security-specific framing (verifiable trust, attack surface, threat model)
+- [ ] Korean rewrite reads naturally — sounds like explaining to someone, not translating
+- [ ] Korean avoids 번역투: no word-for-word structure mirroring from EN
 - [ ] Technical terms: English preserved with Korean context where needed
 
 ## Directory Layout

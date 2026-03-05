@@ -27,3 +27,18 @@ posted_kr: false     # true after KR quote-post is published
 - Each draft contains EN and KR versions separated by `---`
 - After posting, update the corresponding `posted_en`/`posted_kr` to `true`
 - Use `scripts/draft_stub.py` to create new drafts (includes frontmatter automatically)
+
+## Writing Rules (MUST follow)
+
+### EN — Threads formatting
+
+- **Hook first.** 1-2 short lines before the `[AI Security Brief]` tag. Frame why this matters. Make the reader stop scrolling.
+- **Short lines + line breaks.** One idea per line. Don't cram a news item into one long sentence — break it into 2-3 punchy lines.
+- **Security angle in Insight.** This is an AI *security* account. Use security language (verifiable trust, attack surface, threat model, trust boundary), not just generic privacy/trend framing.
+
+### KR — 번역투 방지
+
+- **번역이 아니라 리라이트.** 영어 문장 구조를 그대로 옮기지 말 것. 같은 사실을 한국어로 새로 설명하는 것.
+- **말하듯이 쓸 것.** "이거 뭔데?"라고 물어봤을 때 대답하는 톤. 누군가한테 설명한다고 생각하고 쓸 것.
+- **영어식 짧은 문장 나열 금지.** 영어에서 "Custom silicon. Stateless. No storage."가 멋있어도, 한국어에서는 "자체 칩 서버에서 돌리고, 끝나면 바로 지워요"가 더 자연스러움.
+- **Hook도 새로 쓸 것.** EN hook을 번역하지 말고, 한국어 독자가 멈출 만한 문장을 따로 쓸 것.
