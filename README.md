@@ -120,44 +120,70 @@ This series is written for **Threads** — short, punchy, scroll-stopping. The g
 Every Daily Brief follows this fixed structure:
 
 ```
-HOOK — one or two short lines that frame the story. Make the reader stop scrolling.
+HOOK — 1-2 short lines that frame the story. Make the reader stop scrolling.
 
-[AI Security Brief] YYYY-MM-DD
+[AI Security Brief] Topic Label
 
-1. HEADLINE — short punchy sentences.
-Detail on its own line. (source, YYYY-MM-DD)
+1. HEADLINE
+Short punchy line.
+Another detail on its own line.
+(source, YYYY-MM-DD)
 
-2. HEADLINE — short punchy sentences.
-Detail on its own line. (source, YYYY-MM-DD)
+2. HEADLINE
+Short punchy line.
+Another detail on its own line.
+(source, YYYY-MM-DD)
 
-3. HEADLINE — short punchy sentences.
-Detail on its own line. (source, YYYY-MM-DD)
+3. HEADLINE
+Short punchy line.
+Another detail on its own line.
+(source, YYYY-MM-DD)
 
 Insight: one or two sentences — sharp, security-angled, connects the dots.
 ```
 
 ### Threads formatting rules
 
-- **Line breaks > long sentences.** One idea per line. Threads readers scroll with their thumb.
 - **Hook first.** The `[AI Security Brief]` tag is not a hook. Start with 1-2 lines that frame why this matters.
-- **Break up each news item.** Don't cram everything into one sentence. Use 2-3 short lines per item.
-- **Security angle in Insight.** This is an AI *security* account. Use words like verifiable trust, attack surface, threat model, trust boundary — not just "privacy" or "trend."
+- **Topic label, not date.** Use `[AI Security Brief] Confidential Inference` — not `[AI Security Brief] 2026-03-04`. Date lives in frontmatter only.
+- **One idea per line.** Threads readers scroll with their thumb. Line breaks > long sentences.
+- **Each news item = headline + 2-3 short lines.** Don't cram everything into one sentence.
+- **Security angle in Insight.** Use verifiable trust, attack surface, threat model, trust boundary — not just "privacy" or "trend."
+
+### Accuracy rules
+
+- **Use the vendor's own language.** If Apple says "no user data retention," don't paraphrase to "no persistent storage" (implies no storage hardware). Match official terminology.
+- **Don't overstate sourcing.** If a specific product/feature isn't prominently mentioned in official docs, don't name it as a key point. Generalize instead.
+- **Editorializing vs. facts.** Clearly separate. "Similar pattern to Apple" is safe. "Straight from Apple's playbook" is editorial — avoid in factual lines.
 
 Example:
 
 ```
-Three trillion-dollar companies.
-One identical security thesis.
+Three tech giants.
+One converging security thesis.
 
-[AI Security Brief] 2026-03-04
+[AI Security Brief] Confidential Inference
 
-1. Apple Private Cloud Compute — Custom silicon. Stateless processing. No persistent storage. Then they invited researchers to break it. (Apple Security Research, 2024-06-10)
+1. Apple Private Cloud Compute
+Custom Apple silicon.
+Stateless computation.
+No user data retention — deleted after every response.
+Verifiable transparency + bounty-backed research.
+(Apple Security Research, 2024-06-10)
 
-2. Meta Private Processing — WhatsApp AI features running inside Confidential VMs. Even Meta can't see your messages during inference. (Meta Engineering Blog, 2025-04-29)
+2. Meta Private Processing
+WhatsApp AI features run inside Confidential VMs.
+Requests are end-to-end encrypted.
+Even Meta cannot access message content during processing.
+(Meta Engineering Blog, 2025-04-29)
 
-3. Google Private AI Compute — TEE-based cloud inference + on-device Gemini Nano. IP-blinding relays straight from Apple's playbook. (Google Blog, 2025-11-11)
+3. Google Private AI Compute
+Cloud Gemini inference inside hardware-rooted TEEs.
+Remote attestation ensures verifiable execution.
+Third-party IP-blinding relays in a similar pattern to Apple.
+(Google Blog, 2025-11-11)
 
-Insight: The next AI moat isn't model capability — it's verifiable trust. When all three design systems where "we can't see your data even if we wanted to," that's not a feature. That's the new baseline for AI security.
+Insight: The next AI moat isn't model capability — it's verifiable trust. When all three design systems where operators cannot access user data even in principle, that's not a feature. That's the new baseline for AI security.
 ```
 
 ## Sourcing & Link Policy

@@ -3,16 +3,22 @@
 ```
 HOOK — 1-2 short lines that frame the story.
 
-[AI Security Brief] YYYY-MM-DD
+[AI Security Brief] Topic Label
 
-1. HEADLINE — short punchy sentence.
-One more line of detail if needed. (source, YYYY-MM-DD)
+1. HEADLINE
+Short punchy line.
+Another detail on its own line.
+(source, YYYY-MM-DD)
 
-2. HEADLINE — short punchy sentence.
-One more line of detail if needed. (source, YYYY-MM-DD)
+2. HEADLINE
+Short punchy line.
+Another detail on its own line.
+(source, YYYY-MM-DD)
 
-3. HEADLINE — short punchy sentence.
-One more line of detail if needed. (source, YYYY-MM-DD)
+3. HEADLINE
+Short punchy line.
+Another detail on its own line.
+(source, YYYY-MM-DD)
 
 Insight: security-angled, sharp, connects the dots.
 ```
@@ -20,14 +26,15 @@ Insight: security-angled, sharp, connects the dots.
 ## EN Rules
 
 - **Hook first.** The `[AI Security Brief]` tag is not a hook. Start with 1-2 lines that make the reader stop.
-- **Line breaks > long sentences.** One idea per line. Break up each news item into 2-3 short lines.
+- **Topic label, not date.** `[AI Security Brief] Confidential Inference` — date lives in frontmatter only.
+- **One idea per line.** Each news item = headline on its own line + 2-3 short detail lines.
 - **Security angle in Insight.** Use verifiable trust, attack surface, threat model — not generic "trend" or "privacy."
+- **Match vendor terminology.** Use official language from vendor docs. Don't paraphrase in ways that change meaning.
 - Avoid: "groundbreaking", "game-changing", "unprecedented". If it's big, the facts speak for themselves.
 - Cite the original source and publication date in each item.
 
 ## Instructions
 
-- Replace `YYYY-MM-DD` with today's date.
 - The Insight section should leave readers thinking, not just nodding.
 
 ---
@@ -37,13 +44,19 @@ Insight: security-angled, sharp, connects the dots.
 ```
 HOOK — 자연스러운 한국어로 프레임을 잡는 1-2줄.
 
-[AI 보안 브리프] YYYY-MM-DD
+[AI 보안 브리프] Topic Label
 
-1. 제목 — 설명하듯 풀어서, 간결하게 (출처, 날짜)
+1. 제목
+설명하듯 풀어서, 간결하게.
+(출처, 날짜)
 
-2. 제목 — 설명하듯 풀어서, 간결하게 (출처, 날짜)
+2. 제목
+설명하듯 풀어서, 간결하게.
+(출처, 날짜)
 
-3. 제목 — 설명하듯 풀어서, 간결하게 (출처, 날짜)
+3. 제목
+설명하듯 풀어서, 간결하게.
+(출처, 날짜)
 
 인사이트: 보안 관점에서 날카롭게, 핵심을 찌르는 한두 문장.
 ```

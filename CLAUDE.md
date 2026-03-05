@@ -33,8 +33,10 @@ posted_kr: false     # true after KR quote-post is published
 ### EN — Threads formatting
 
 - **Hook first.** 1-2 short lines before the `[AI Security Brief]` tag. Frame why this matters. Make the reader stop scrolling.
-- **Short lines + line breaks.** One idea per line. Don't cram a news item into one long sentence — break it into 2-3 punchy lines.
-- **Security angle in Insight.** This is an AI *security* account. Use security language (verifiable trust, attack surface, threat model, trust boundary), not just generic privacy/trend framing.
+- **Topic label, not date.** `[AI Security Brief] Confidential Inference` — date lives in frontmatter only.
+- **One idea per line.** Each news item = headline on its own line + 2-3 short detail lines. No single-sentence paragraphs stuffing everything in.
+- **Security angle in Insight.** Use security language (verifiable trust, attack surface, threat model, trust boundary), not just generic privacy/trend framing.
+- **Match vendor terminology.** Use the official language from vendor docs. Don't paraphrase in ways that change meaning (e.g., "no user data retention" ≠ "no persistent storage").
 
 ### KR — 번역투 방지
 
